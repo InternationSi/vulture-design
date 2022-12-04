@@ -1,0 +1,19 @@
+{
+  "name": "vulture-design",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "dev": "pnpm -C example dev"
+  },
+  "keywords": [],
+  "author": "xiaosi",
+  "license": "ISC",
+  "devDependencies": {
+    "lit": "^2.4.1",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@vuld/utils": "workspace:^1.0.0",
+    "@vuld/vulture": "workspace:^1.0.0"
+  }
+}

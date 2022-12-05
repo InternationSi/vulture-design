@@ -2,11 +2,16 @@
  * @Author: sfy
  * @Date: 2022-12-04 21:44:02
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-04 21:51:41
- * @FilePath: /advance/readme.md
+ * @LastEditTime: 2022-12-04 23:29:16
+ * @FilePath: /vulture-design/readme.md
  * @Description: update here
 -->
 
+启动项目
+```
+pnpm install
+pnpm run dev
+```
 
 ### 全局安装包
 ```

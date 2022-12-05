@@ -2,11 +2,15 @@
   "name": "@vuld/utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "dist/index.es.js",
+  "module": "dist/index.es.js",
+  "files": [
+    "es",
+    "lib",
+    "dist"
+  ],
+  "scripts": {},
   "keywords": [],
-  "author": "",
+  "author": "xiaosi",
   "license": "ISC"
 }

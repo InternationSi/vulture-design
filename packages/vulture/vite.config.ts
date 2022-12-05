@@ -1,14 +1,17 @@
 /*
  * @Author: sfy
- * @Date: 2022-12-04 22:30:47
+ * @Date: 2022-12-06 00:02:01
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-04 22:50:49
- * @FilePath: /advance/packages/vulture/vite.config.ts
+ * @LastEditTime: 2022-12-06 00:05:43
+ * @FilePath: /vulture-design/packages/utils/vite.config.ts
  * @Description: update here
  */
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite'
+import preact from '@preact/preset-vite'
 
+// https://vitejs.dev/config/
 export default defineConfig({
+  plugins: [preact()],
   build: {
     sourcemap: true,
     lib: {
@@ -18,5 +21,4 @@ export default defineConfig({
       formats: ['es', 'umd']
     },
   },
-  
-});
+})

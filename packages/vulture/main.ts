@@ -1,9 +1,12 @@
 /*
  * @Author: sfy
- * @Date: 2022-12-04 22:32:27
+ * @Date: 2022-12-06 00:01:39
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-04 22:32:28
- * @FilePath: /advance/packages/vulture/main.ts
+ * @LastEditTime: 2022-12-06 00:11:48
+ * @FilePath: /vulture-design/packages/utils/main.ts
  * @Description: update here
  */
-export * from './src/button'
+import register from 'preact-custom-element';
+import { Greeting } from './src/app';
+
+register(Greeting, 'x-greeting', ['name'], { shadow: false });

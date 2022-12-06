@@ -16,10 +16,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "antd": "^5.0.4",
     "preact": "^10.11.2"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.4.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-preset-react": "^6.24.1",
     "preact-custom-element": "^4.2.1",
     "vite": "^3.2.3"
   }

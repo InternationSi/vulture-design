@@ -2,8 +2,8 @@
  * @Author: sfy
  * @Date: 2022-12-06 00:02:01
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-06 00:05:43
- * @FilePath: /vulture-design/packages/utils/vite.config.ts
+ * @LastEditTime: 2022-12-06 22:26:09
+ * @FilePath: /vulture-design/packages/vulture/vite.config.ts
  * @Description: update here
  */
 import { defineConfig } from 'vite'

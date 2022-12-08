@@ -2,15 +2,22 @@
  * @Author: sfy
  * @Date: 2022-12-06 00:01:39
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-06 22:45:16
+ * @LastEditTime: 2022-12-07 22:02:59
  * @FilePath: /vulture-design/packages/vulture/main.ts
  * @Description: update here
  */
 import register from 'preact-custom-element';
-import { Greeting } from './src/app';
+import {
+  COMPONENTS_TAG,
+  ConditionTreeGroup,
+} from './src';
 
-register(Greeting, 'x-greeting', ['items'], { shadow: false });
+console.log(ConditionTreeGroup, 'ConditionTreeGroup');
 
-export {
-  Greeting
-}
+
+register(ConditionTreeGroup.components,
+  `${COMPONENTS_TAG}-${ConditionTreeGroup.displayName}`,
+  ConditionTreeGroup.propsList,
+  { shadow: false }
+);
+

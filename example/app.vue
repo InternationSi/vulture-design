@@ -2,7 +2,7 @@
  * @Author: sfy
  * @Date: 2022-12-04 21:18:00
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-06 22:46:57
+ * @LastEditTime: 2022-12-07 20:00:49
  * @FilePath: /vulture-design/example/app.vue
  * @Description: update here
 -->
@@ -10,7 +10,7 @@
    <div>
     测试213
    </div>
-   <x-greeting :items="stepItems"></x-greeting>
+   <vul-condition-tree :items="stepItems"></vul-condition-tree>
 </template>
 
 <script lang="ts" setup>

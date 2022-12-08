@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.4.0",
+    "react-force-graph": "^1.41.16",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-preset-react": "^6.24.1",
     "preact-custom-element": "^4.2.1",

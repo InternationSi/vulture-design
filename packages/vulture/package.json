@@ -20,11 +20,14 @@
     "preact": "^10.11.2"
   },
   "devDependencies": {
+    "3d-force-graph": "^1.70.17",
     "@preact/preset-vite": "^2.4.0",
-    "react-force-graph": "^1.41.16",
     "babel-plugin-module-resolver": "^4.1.0",
     "babel-preset-react": "^6.24.1",
     "preact-custom-element": "^4.2.1",
+    "react-force-graph": "^1.41.16",
+    "three": "^0.147.0",
+    "three-spritetext": "^1.6.5",
     "vite": "^3.2.3"
   }
 }

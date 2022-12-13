@@ -2,7 +2,7 @@
  * @Author: sfy
  * @Date: 2022-12-11 13:11:02
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-11 15:35:34
+ * @LastEditTime: 2022-12-12 22:20:35
  * @FilePath: /vulture-design/packages/vulture/src/components/graph-force/react-graph-force.tsx
  * @Description: update here
  */
@@ -16,8 +16,9 @@
  */
 import { useEffect } from 'preact/hooks';
 import { useCallback, useMemo, useState, useRef } from 'preact/hooks'
-import { ForceGraph2D, ForceGraph3D, ForceGraphVR, ForceGraphAR } from 'react-force-graph';
+import { ForceGraph3D } from 'react-force-graph';
 import SpriteText from 'three-spritetext';
+import { useHightLig, useCameraPos, useCollapsed } from './effect'
 import { mockData } from './mock'
 
 
@@ -47,66 +48,34 @@ export function ReactGraph() {
 
     return gData;
   }, []);
-
-  const [highlightNodes, setHighlightNodes] = useState(new Set());
-  const [highlightLinks, setHighlightLinks] = useState(new Set());
-  const [hoverNode, setHoverNode] = useState(null);
-
-  const updateHighlight = () => {
-    setHighlightNodes(highlightNodes);
-    setHighlightLinks(highlightLinks);
-  };
-
-  const handleNodeHover = node => {
-    if (!node) return
-    highlightNodes.clear();
-    highlightLinks.clear();
-    if (node) {
-      highlightNodes.add(node);
-      node.neighbors.forEach(neighbor => highlightNodes.add(neighbor));
-      node.links.forEach(link => highlightLinks.add(link));
-    }
-
-    setHoverNode(node || null);
-    updateHighlight();
-  };
-
-  const handleLinkHover = link => {
-    highlightNodes.clear();
-    highlightLinks.clear();
-
-    if (link) {
-      highlightLinks.add(link);
-      highlightNodes.add(link.source);
-      highlightNodes.add(link.target);
-    }
-
-    updateHighlight();
-  };
-
+  const { collaspedEvent, prunedTree } = useCollapsed(data)
 
   useEffect(() => {
-    console.log(curRef);
     if (!curRef.current) return
-    const result = curRef.current.d3Force('link').distance(node => {
-      console.log(node.type);
+    curRef.current.d3Force('link').distance(node => {
       if (node.type == 'mfr') {
-        return 200
-
+        return 180
       }
       return 90
     })
-    console.log(result, 'result');
 
   }, [])
+
+  const { highlightNodes, highlightLinks, hoverNode, handleNodeHover, handleLinkHover } = useHightLig()
+
+  const { camePay } = useCameraPos(curRef)
+
+
+
 
   return (
     <>
       <ForceGraph3D
         ref={curRef}
-        graphData={data}
+        graphData={prunedTree}
         backgroundColor="#ffffff"
         nodeRelSize={15}
+        nodeResolution={20}
         nodeColor={node => {
           return highlightNodes.has(node) ? node === hoverNode ? 'rgb(255,0,0,1)' : 'rgba(255,160,0,0.8)' : 'rgba(0,255,255,0.6)'
         }}
@@ -123,9 +92,12 @@ export function ReactGraph() {
         linkDirectionalArrowLength={15}
         linkDirectionalArrowRelPos={1}
         linkDirectionalParticles={4}
-        linkDirectionalParticleWidth={link => highlightLinks.has(link) ? 8 : 0}
+        // linkDirectionalParticleWidth={link => highlightLinks.has(link) ? 8 : 0}
+        linkDirectionalParticleWidth={8}
         onNodeHover={handleNodeHover}
         onLinkHover={handleLinkHover}
+        onNodeClick={camePay}
+        onNodeRightClick={collaspedEvent}
       />
     </>
   )

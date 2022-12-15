@@ -2,7 +2,7 @@
  * @Author: sfy
  * @Date: 2022-12-11 13:11:02
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-12 22:20:35
+ * @LastEditTime: 2022-12-13 19:32:59
  * @FilePath: /vulture-design/packages/vulture/src/components/graph-force/react-graph-force.tsx
  * @Description: update here
  */
@@ -21,10 +21,16 @@ import SpriteText from 'three-spritetext';
 import { useHightLig, useCameraPos, useCollapsed } from './effect'
 import { mockData } from './mock'
 
-
 export function ReactGraph() {
   const curRef = useRef<any>()
   const data = useMemo(() => {
+    fetch('../mock.json')
+      .then((res) => { return res.json(); })
+      .then((data) => {
+        console.log(data, 'data');
+
+      })
+
     const gData = {
       nodes: mockData.data.nodes,
       links: mockData.data.edges

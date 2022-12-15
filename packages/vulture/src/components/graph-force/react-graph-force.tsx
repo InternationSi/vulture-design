@@ -2,21 +2,13 @@
  * @Author: sfy
  * @Date: 2022-12-11 13:11:02
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-13 19:32:59
+ * @LastEditTime: 2022-12-15 20:31:42
  * @FilePath: /vulture-design/packages/vulture/src/components/graph-force/react-graph-force.tsx
- * @Description: update here
- */
-/*
- * @Author: sfy
- * @Date: 2022-12-07 22:06:10
- * @LastEditors: sfy
- * @LastEditTime: 2022-12-08 23:13:46
- * @FilePath: /vulture-design/packages/vulture/app.tsx
  * @Description: update here
  */
 import { useEffect } from 'preact/hooks';
 import { useCallback, useMemo, useState, useRef } from 'preact/hooks'
-import { ForceGraph3D } from 'react-force-graph';
+import ForceGraph3D from 'react-force-graph-3d';
 import SpriteText from 'three-spritetext';
 import { useHightLig, useCameraPos, useCollapsed } from './effect'
 import { mockData } from './mock'

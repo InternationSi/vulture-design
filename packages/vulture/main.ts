@@ -2,7 +2,7 @@
  * @Author: sfy
  * @Date: 2022-12-06 00:01:39
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-07 22:02:59
+ * @LastEditTime: 2022-12-15 20:16:22
  * @FilePath: /vulture-design/packages/vulture/main.ts
  * @Description: update here
  */
@@ -11,8 +11,6 @@ import {
   COMPONENTS_TAG,
   ConditionTreeGroup,
 } from './src';
-
-console.log(ConditionTreeGroup, 'ConditionTreeGroup');
 
 
 register(ConditionTreeGroup.components,

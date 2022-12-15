@@ -2,14 +2,13 @@
  * @Author: sfy
  * @Date: 2022-12-15 20:21:39
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-15 20:38:53
+ * @LastEditTime: 2022-12-15 23:25:27
  * @FilePath: /vulture-design/packages/vulture/src/components/condition-tree/components/RelationTree/index.tsx
  * @Description: update here
  */
 import produce from 'immer';
 import { useEffect, useState } from 'preact/hooks';
 import RelationGroup, { getArrPos, defaultOpsValue } from '../RelationGroup';
-
 
 const defaultRelation = {
   ops: defaultOpsValue,

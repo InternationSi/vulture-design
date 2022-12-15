@@ -27,6 +27,7 @@
     "babel-preset-react": "^6.24.1",
     "preact-custom-element": "^4.2.1",
     "react-force-graph-3d": "^1.21.16",
+    "sass": "^1.56.2",
     "three": "^0.147.0",
     "three-spritetext": "^1.6.5",
     "vite": "^3.2.3"

@@ -2,12 +2,12 @@
  * @Author: sfy
  * @Date: 2022-12-15 20:33:28
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-15 22:49:13
+ * @LastEditTime: 2022-12-15 23:40:45
  * @FilePath: /vulture-design/packages/vulture/src/components/condition-tree/components/RelationsItem/index.tsx
  * @Description: update here
  */
 import { Button } from 'antd';
-
+import './index.scss'
 function RelationItem({ data, pos, setElementTerm, onDeleteTerm, onTermChange }) {
   const handleDeleteTermClick = () => {
     if (typeof onDeleteTerm === 'function') {

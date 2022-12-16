@@ -2,12 +2,11 @@
  * @Author: sfy
  * @Date: 2022-12-15 20:34:08
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-15 23:32:59
+ * @LastEditTime: 2022-12-16 22:02:10
  * @FilePath: /vulture-design/packages/vulture/src/components/condition-tree/components/RelationTerm/index.tsx
  * @Description: update here
  */
 import { Select, Input } from 'antd';
-import './index.scss'
 const RelationTerm = ({ data, onChange }) => {
   const setOnChange = (params) => {
 

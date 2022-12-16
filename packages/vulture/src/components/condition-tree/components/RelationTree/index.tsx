@@ -2,7 +2,7 @@
  * @Author: sfy
  * @Date: 2022-12-15 20:21:39
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-15 23:25:27
+ * @LastEditTime: 2022-12-16 22:01:49
  * @FilePath: /vulture-design/packages/vulture/src/components/condition-tree/components/RelationTree/index.tsx
  * @Description: update here
  */
@@ -10,12 +10,19 @@ import produce from 'immer';
 import { useEffect, useState } from 'preact/hooks';
 import RelationGroup, { getArrPos, defaultOpsValue } from '../RelationGroup';
 
+
+
+type RelationTreeProps = {
+  value?: any;
+  onChange?: any
+  setElementTerm: any
+};
 const defaultRelation = {
   ops: defaultOpsValue,
   children: [{}],
 };
 
-function RelationTree({ value, onChange, setElementTerm }) {
+function RelationTree({ value, onChange, setElementTerm }: RelationTreeProps) {
   const [relations, setRelations] = useState(defaultRelation);
   // console.log('relations', relations);
   if (value) {
@@ -84,7 +91,7 @@ const getNewValue = (data = {}, pos = '', type, record) => {
   const arrPos = getArrPos(pos);
   const last = arrPos.length - 1;
   // 使用 immer 进行数据处理
-  return produce(data, (draft) => {
+  return produce(data, (draft: any) => {
     let prev = { data: draft, idx: 0 };
     // 暂存遍历到的当前条件组的数据
     let current = draft.children || [];

@@ -2,7 +2,7 @@
  * @Author: sfy
  * @Date: 2022-12-04 21:18:00
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-07 20:00:49
+ * @LastEditTime: 2022-12-16 22:22:19
  * @FilePath: /vulture-design/example/app.vue
  * @Description: update here
 -->
@@ -11,6 +11,7 @@
     测试213
    </div>
    <vul-condition-tree :items="stepItems"></vul-condition-tree>
+   <!-- <vul-react-graph></vul-react-graph> -->
 </template>
 
 <script lang="ts" setup>

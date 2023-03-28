@@ -10,7 +10,7 @@ import ThreeForceGraph from './three-forcegraph'
 import ThreeRenderObjects from './three-render-objects'
 
 import accessorFn from './accessor-fn'
-import Kapsule from './kapsule'
+import Kapsule from '../kapsule'
 
 import linkKapsule from './kapsule-link.js'
 

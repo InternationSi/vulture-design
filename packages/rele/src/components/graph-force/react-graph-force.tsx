@@ -2,13 +2,13 @@
  * @Author: sfy
  * @Date: 2022-12-11 13:11:02
  * @LastEditors: sfy
- * @LastEditTime: 2023-03-27 23:22:29
+ * @LastEditTime: 2023-03-28 18:46:18
  * @FilePath: /vulture-design/packages/rele/src/components/graph-force/react-graph-force.tsx
  * @Description: update here
  */
 import React from 'react';
 import { useCallback, useMemo, useState, useRef,useEffect } from 'react'
-import ForceGraph3D from 'react-force-graph-3d';
+import ForceGraph3D from '../base-force-graph/react-force-graph-3d';
 import SpriteText from 'three-spritetext';
 import { useHightLig, useCameraPos, useCollapsed } from './effect'
 import { mockData } from './mock'

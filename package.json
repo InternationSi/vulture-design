@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@vuld/rele": "workspace:^1.0.0",
-    "@vuld/vuele": "workspace:^1.0.0"
+    "@vuld/vuele": "workspace:^1.0.0", 
+    "@vuld/common":"workspace:^1.0.0"
   }
 }

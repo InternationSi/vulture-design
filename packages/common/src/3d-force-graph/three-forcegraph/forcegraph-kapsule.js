@@ -52,7 +52,7 @@ import graph from 'ngraph.graph'
 import forcelayout from 'ngraph.forcelayout'
 const ngraph = { graph, forcelayout }
 
-import Kapsule from '../kapsule'
+import Kapsule from '../../kapsule'
 import accessorFn from '../accessor-fn'
 
 import { min as d3Min, max as d3Max } from 'd3-array'

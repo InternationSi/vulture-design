@@ -2,7 +2,7 @@
  * @Author: sfy
  * @Date: 2022-12-04 21:44:02
  * @LastEditors: sfy
- * @LastEditTime: 2022-12-04 23:29:16
+ * @LastEditTime: 2023-03-28 21:59:25
  * @FilePath: /vulture-design/readme.md
  * @Description: update here
 -->
@@ -21,4 +21,8 @@ pnpm add typescript -Dw
 pnpm add lit -F @vuld/vulture
 // 主包安装三个子包
 pnpm install @vuld/vulture -w
+
+// 互相安装依赖
+pnpm i @test/utils -r --filter @test/ui
+
 ```

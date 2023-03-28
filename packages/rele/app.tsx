@@ -2,7 +2,7 @@
  * @Author: sfy
  * @Date: 2023-03-27 23:07:19
  * @LastEditors: sfy
- * @LastEditTime: 2023-03-27 23:23:37
+ * @LastEditTime: 2023-03-28 22:56:53
  * @FilePath: /vulture-design/packages/rele/app.tsx
  * @Description: update here
  */
@@ -15,14 +15,14 @@
  * @Description: update here
  */
 import React from 'react'
-import { ConditionTree, ReactGraph } from './src/components'
+import { ConditionTree, ReactGraph, ReactNeo4jGraph } from './src/components'
 
 export default function App() {
-
+  
 
   return (
     <>
-      <ReactGraph />
+      <ReactNeo4jGraph />
       {/* <ConditionTree /> */}
     </>
   )

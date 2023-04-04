@@ -1,29 +1,21 @@
+<!--
+ * @Author: sfy
+ * @Date: 2023-03-27 22:43:04
+ * @LastEditors: sfy
+ * @LastEditTime: 2023-04-03 21:49:48
+ * @FilePath: /vulture-design/packages/vuele/src/App.vue
+ * @Description: update here
+-->
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Drage from './components/drage/index.vue'
+import D3Demo from './components/D3Demo/test01.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+  <Drage />
+  <!-- <D3Demo /> -->
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
+
 </style>
